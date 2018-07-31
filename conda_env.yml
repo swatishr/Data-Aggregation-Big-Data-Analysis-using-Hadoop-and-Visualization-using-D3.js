@@ -1,0 +1,63 @@
+name: py27
+channels:
+  - defaults
+dependencies:
+  - asn1crypto=0.24.0=py27_0
+  - ca-certificates=2018.03.07=0
+  - certifi=2018.1.18=py27_0
+  - cffi=1.11.5=py27h9745a5d_0
+  - chardet=3.0.4=py27h24ac8b0_1
+  - cryptography=2.2.2=py27h14c3975_0
+  - cymem=1.31.2=py27_0
+  - cytoolz=0.8.2=py27h4057e0e_0
+  - dill=0.2.7.1=py27h1345f91_0
+  - enum34=1.1.6=py27h85d59be_1
+  - ftfy=4.4.3=py27_0
+  - html5lib=1.0.1=py27h5233db4_0
+  - idna=2.6=py27ha1b4782_1
+  - intel-openmp=2018.0.0=8
+  - ipaddress=1.0.19=py27_0
+  - libedit=3.1=h9ac1fc1_0
+  - libffi=3.2.1=h97ff0df_4
+  - libgcc-ng=7.2.0=h9268252_3
+  - libgfortran-ng=7.2.0=h9268252_3
+  - libstdcxx-ng=7.2.0=h9268252_3
+  - mkl=2018.0.2=1
+  - mkl_fft=1.0.1=py27h3010b51_0
+  - mkl_random=1.0.1=py27h629b387_0
+  - msgpack-numpy=0.4.3=py27_0
+  - msgpack-python=0.4.8=py27h104250f_0
+  - murmurhash=0.28.0=py27_0
+  - ncurses=6.0=h8a800b7_2
+  - nltk=3.2.5=py27h4175775_0
+  - numpy=1.14.2=py27hdbf6ddf_1
+  - openssl=1.0.2o=h20670df_0
+  - pathlib=1.0.1=py27_0
+  - pip=9.0.3=py27_0
+  - plac=0.9.6=py27_0
+  - preshed=1.0.0=py27_0
+  - pycparser=2.18=py27h94f9063_1
+  - pyopenssl=17.5.0=py27h55b0ce5_0
+  - pysocks=1.6.8=py27_0
+  - python=2.7.14=h1571d57_31
+  - readline=7.0=h6b4b497_4
+  - regex=2017.11.09=py27hb504c53_0
+  - requests=2.18.4=py27h4637c99_1
+  - setuptools=39.0.1=py27_0
+  - six=1.11.0=py27h0b002a5_1
+  - spacy=2.0.10=py27h637b7d7_0
+  - sqlite=3.22.0=h1bed415_0
+  - termcolor=1.1.0=py27_1
+  - thinc=6.10.1=py27h003a84d_0
+  - tk=8.6.7=h9a736a7_3
+  - toolz=0.9.0=py27_0
+  - tqdm=4.19.9=py27_0
+  - ujson=1.35=py27_0
+  - urllib3=1.22=py27h2188871_0
+  - wcwidth=0.1.7=py27hf3ca5ac_0
+  - webencodings=0.5.1=py27h453cfa3_1
+  - wheel=0.31.0=py27_0
+  - wrapt=1.10.11=py27h6206ed2_0
+  - zlib=1.2.11=h907e355_2
+prefix: /home/hadoop/miniconda3/envs/py27
+
