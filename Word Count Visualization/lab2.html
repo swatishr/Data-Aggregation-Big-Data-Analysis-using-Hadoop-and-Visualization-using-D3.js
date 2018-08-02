@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Lab2 Visualization</title>
+    <script src="lib/d3/d3.js" charset="utf-8"></script>
+    <script src="lib/d3/d3.layout.cloud.js"></script>
+    
+    <script src="data/tweets_small.js"></script>
+    <script src="data/tweets_full.js"></script>
+    <script src="data/nytimes_small.js"></script>
+    <script src="data/nytimes_full.js"></script>
+    <script src="data/nytimes_cooccurrence.js"></script>
+    <script src="data/tweets_cooccurrence.js"></script>
+    
+    <script src="d3.wordcloud.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="style.css" type="text/css" rel="stylesheet">
+  </head>
+  <body class="bg">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav">
+          <li class="active"><a class="jumper" href="#heading1">Twitter(Small data)</a></li>
+          <li><a class="jumper" href="#heading2">Twitter(Whole data)</a></li>
+          <li><a class="jumper" href="#heading3">NY Times(Small data)</a></li>
+          <li><a class="jumper" href="#heading4">NY Times(Whole data)</a></li>
+          <li><a class="jumper" href="#heading5">Co-occurrence-Twitter</a></li>
+          <li><a class="jumper" href="#heading6">Co-occurrence-NYT</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="container" class="container-fluid div-container">
+      <h3 id="heading1" class="text-center h3-format">Twitter Word Cloud for Small dataset</h3>
+      <div id="tweetwordcloud1" class="cloud-container"></div>
+      <h3 id="heading2" class="text-center h3-format">Twitter Word Cloud for Whole dataset</h3>
+      <div id="tweetwordcloud2" class="cloud-container"></div>
+      <h3 id="heading3" class="text-center h3-format">NY Times Word Cloud for Small dataset</h3>
+      <div id="nytwordcloud1" class="cloud-container"></div>
+      <h3 id="heading4" class="text-center h3-format">NY Times Word Cloud for Whole dataset</h3>
+      <div id="nytwordcloud2" class="cloud-container"></div>
+      <h3 id="heading5" class="text-center h3-format">Word Cloud for Co-occurrence in Twitter Dataset</h3>
+      <div id="tweetwordcloud3" class="cloud-container"></div>
+      <h3 id="heading6" class="text-center h3-format">Word Cloud for Co-occurrence in NY Times Dataset</h3>
+      <div id="nytwordcloud3" class="cloud-container"></div>
+    </div>
+    <script>
+
+          console.log(tweet_cooccur)
+          load_data(tweetsmall,'#tweetwordcloud1',[800, 400])
+          load_data(tweetfull,'#tweetwordcloud2',[800, 400])
+          load_data(nytsmall,'#nytwordcloud1',[800, 400])
+          load_data(nytfull,'#nytwordcloud2',[800, 400])
+          load_data(tweet_cooccur,'#tweetwordcloud3',[600, 200])
+          load_data(nyt_cooccur,'#nytwordcloud3',[800, 400])
+          
+         function load_data(words, selector,size){
+            d3.wordcloud()
+            .size(size)
+            .selector(selector)
+            .words(words)
+            .onwordclick(function(d, i) {
+              if (d.href) { window.location = d.href; }
+            })
+            .start();
+         }
+
+        $(".jumper").on("click", function(e) {
+            e.preventDefault();
+            $("body, html").animate({ 
+                scrollTop: $( $(this).attr('href') ).position().top 
+            }, 600);
+        });
+    </script>
+  </body>
+</html>

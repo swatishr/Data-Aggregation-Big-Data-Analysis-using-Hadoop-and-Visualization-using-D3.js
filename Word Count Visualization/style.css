@@ -1,0 +1,16 @@
+.bg {
+	background: url('background.jpg') no-repeat center center fixed; width: 100%; height: 100vh;
+}
+
+.cloud-container{
+	width: 800px;
+	margin:0 auto;
+}
+
+.div-container{
+	margin-top: 50px;
+}
+
+.h3-format{
+	padding-top: 50px;
+}
